@@ -1,11 +1,13 @@
+/* GENERAL */
 .App {
-  text-align: center;
   cursor: pointer;
 }
 
-h1{
+.home{
+  text-align: center;
   padding: 5px;
   margin: 5px;
+  margin: 10% 100px;
 }
 
 body{
@@ -17,7 +19,7 @@ body{
 }
 
 /* NAVBAR */
-img{
+.NavBar img{
   width: 80px;
   padding: 5px;
 }
@@ -25,6 +27,14 @@ img{
 .color-nav{
   background-color:#E0BBE4;
   font-weight: bold;
+}
+
+.freeze{
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index:999;
 }
 
 .nav-link{
@@ -42,6 +52,65 @@ img{
 }
 
 .nav-link:active {
+  background-color: #E0BBE4;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+/* INDEX */
+.games Table{
+  background-color:white;
+  font-weight: bold;
+}
+
+.index{
+  text-align: center;
+  opacity: 80%;
+  background-color: white;
+  margin: 15% 100px;
+}
+
+/* SHOW */
+.show{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin: 10px;
+}
+
+.show Button {
+  margin: 5px;
+}
+
+/* NEW */
+.new{
+  opacity: 80%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin: 15% 200px;
+}
+
+.new-form Button {
+  border: 1px solid white;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 15px;
+  color: black;
+  box-shadow: 0 5px rgb(169, 169, 169);
+  background-color: #E0BBE4;
+  font-weight: bold;
+}
+
+.new-form Button:hover{
+  background-color: white;
+  color: black;
+}
+
+.new-form Button:active {
   background-color: #E0BBE4;
   box-shadow: 0 5px #666;
   transform: translateY(4px);

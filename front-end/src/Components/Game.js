@@ -1,8 +1,14 @@
-const Game = ({game}) => {
+const Game = ({game, id}) => {
     return (
-        <div>
-            <p>{game.name}</p>
-        </div>
+        <>
+            <tr>
+                <td>{id}</td>
+                <td>{game.is_favorite ? <span className="glow">⭐️</span> : null}<a href={`/games/${id}`}>{game.name}</a></td>
+                <td>{game.console}</td>
+                <td>{game.progress}</td>
+                <td>{game.rating}</td>
+            </tr>
+        </>
     );
 };
 

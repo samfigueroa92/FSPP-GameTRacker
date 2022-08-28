@@ -1,7 +1,9 @@
+import GameDetails from "../Components/GameDetails";
+
 const Show = () => {
     return (
-        <div>
-            <h1>Show Page</h1>
+        <div className="show">
+          <GameDetails />
         </div>
     );
 };

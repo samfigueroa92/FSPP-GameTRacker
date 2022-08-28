@@ -4,7 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 
 const NavBar = () => {
   return (
-    <div className="NavBar">
+    <div className="NavBar freeze">
       <Navbar className="color-nav" variant="light">
         <Container>
           <Navbar.Brand href="/">
