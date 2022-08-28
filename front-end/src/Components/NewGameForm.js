@@ -18,10 +18,13 @@ const NewGameForm = () => {
 
   const navigate = useNavigate();
 
+  //ERROR SUBMITTING NEW GAME, CANNOT POST ???
+
   const addNewGame = (newGame) => {
-    axios.post(`${API}/games`, newGame)
-    .then(() => navigate("/games"))
-    .catch((err) => console.error(err));
+    axios
+      .post(`${API}/games`, newGame)
+      .then(() => navigate("/games"))
+      .catch((err) => console.error(err));
   };
 
   const handleInput = (e) => {
@@ -68,20 +71,32 @@ const NewGameForm = () => {
 
           <Form.Group className="mb-3">
             <Form.Label>Progress:</Form.Label>
-            <Form.Select>
-          <option>--Select and option--</option>
-          <option>Playing</option>
-          <option>Completed</option>
-          <option>Abandoned</option>
-        </Form.Select>
             <Form.Control
+              id="progress"
+              value={game.progress}
               type="text"
+              placeholder="..."
+              onChange={handleInput}
+              required
+            />
+          </Form.Group>
+
+          {/* <Form.Group className="mb-3">
+            <Form.Label>Progress:</Form.Label>
+            <Form.Control
+              as="select"
               placeholder="..."
               id="progress"
               value={game.progress}
               onChange={handleInput}
-            />
-          </Form.Group>
+            >
+              <option>--Select an option--</option>
+              <option>In Progress</option>
+              <option>Playing</option>
+              <option>Completed</option>
+              <option>Abandoned</option>
+            </Form.Control>
+          </Form.Group> */}
 
           <Form.Group className="mb-3">
             <Form.Label>Rating:</Form.Label>
@@ -109,9 +124,9 @@ const NewGameForm = () => {
           </Button>
 
           <Link to="/">
-          <Button variant="light" type="submit">
-            Go Back
-          </Button>
+            <Button variant="light" type="submit">
+              Go Back
+            </Button>
           </Link>
         </Form>
       </Container>

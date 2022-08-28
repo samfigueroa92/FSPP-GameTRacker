@@ -31,7 +31,7 @@ games.get("/", async (req, res) => {
   games.post("/", async (req, res) => {
     try {
       const game = await createGame(req.body);
-      res.json({payload: game, success: true});
+      res.json(game);
     } catch (error) {
       return error;
     };
