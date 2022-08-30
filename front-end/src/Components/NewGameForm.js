@@ -72,18 +72,6 @@ const NewGameForm = () => {
           <Form.Group className="mb-3">
             <Form.Label>Progress:</Form.Label>
             <Form.Control
-              id="progress"
-              value={game.progress}
-              type="text"
-              placeholder="..."
-              onChange={handleInput}
-              required
-            />
-          </Form.Group>
-
-          {/* <Form.Group className="mb-3">
-            <Form.Label>Progress:</Form.Label>
-            <Form.Control
               as="select"
               placeholder="..."
               id="progress"
@@ -96,7 +84,7 @@ const NewGameForm = () => {
               <option>Completed</option>
               <option>Abandoned</option>
             </Form.Control>
-          </Form.Group> */}
+          </Form.Group>
 
           <Form.Group className="mb-3">
             <Form.Label>Rating:</Form.Label>

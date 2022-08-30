@@ -21,7 +21,6 @@ const Games = () => {
                 <Table striped bordered hover >
                     <thead>
                         <tr>
-                            <th>#</th>
                             <th>Game</th>
                             <th>Console</th>
                             <th>Progress</th>
@@ -29,7 +28,7 @@ const Games = () => {
                         </tr>
                     </thead>
                     <tbody>
-                    {games.map(game => <Game key={game.id} game={game} id={game.id} />)}
+                    {games.sort((a,b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0)).map(game => <Game key={game.id} game={game} id={game.id} />)}
                     </tbody>
                 </Table>
             </Container>

@@ -1,7 +1,9 @@
+import EditGameForm from "../Components/EditGameForm";
+
 const Edit = () => {
     return (
-        <div>
-            <h1>Edit Page</h1>
+        <div className="edit">
+            <EditGameForm />
         </div>
     );
 };

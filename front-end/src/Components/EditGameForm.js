@@ -8,32 +8,51 @@ import Container from "react-bootstrap/Container";
 const API = process.env.REACT_APP_API_URL;
 
 const EditGameForm = () => {
-    const [game, setGame] = useState({
-        name: "",
-        console: "",
-        progress: "",
-        rating: "",
-        is_favorite: false,
-    });
-
     const { id } = useParams();
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
-    // const updateGame = (updatedGame) => {
+  const [game, setGame] = useState({
+    name: "",
+    console: "",
+    progress: "",
+    rating: "",
+    is_favorite: false,
+  });
 
-    // }
+  useEffect(() => {
+    axios.get(`${API}/games/${id}`)
+    .then(res => setGame(res.data.payload))
+    .catch(err => console.error(err))
+  }, [id]);
 
+  const updateGame = (updatedGame, id) => {
+    axios.put(`${API}/games/${id}`, updatedGame)
+    .then(()=> navigate(`/games/${id}`))
+    .catch(err => console.error(err))
+  };
 
-    return (
-        <div className="edit">
-            <h1>Edit Game</h1>
-            <Container>
+  const handleInput = (e) => {
+    setGame({ ...game, [e.target.id]: e.target.value });
+  };
+
+  const handleCheckbox = (e) => {
+    setGame({ ...game, is_favorite: !game.is_favorite });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    updateGame(game, id);
+  };
+
+  return (
+    <div className="edit-form">
+      <h1>Edit Game</h1>
+      <Container>
         <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-3">
             <Form.Label>Name:</Form.Label>
             <Form.Control
               type="text"
-              placeholder="..."
               id="name"
               value={game.name}
               onChange={handleInput}
@@ -47,7 +66,6 @@ const EditGameForm = () => {
               id="console"
               value={game.console}
               type="text"
-              placeholder="..."
               onChange={handleInput}
               required
             />
@@ -56,20 +74,7 @@ const EditGameForm = () => {
           <Form.Group className="mb-3">
             <Form.Label>Progress:</Form.Label>
             <Form.Control
-              id="progress"
-              value={game.progress}
-              type="text"
-              placeholder="..."
-              onChange={handleInput}
-              required
-            />
-          </Form.Group>
-
-          {/* <Form.Group className="mb-3">
-            <Form.Label>Progress:</Form.Label>
-            <Form.Control
               as="select"
-              placeholder="..."
               id="progress"
               value={game.progress}
               onChange={handleInput}
@@ -80,13 +85,12 @@ const EditGameForm = () => {
               <option>Completed</option>
               <option>Abandoned</option>
             </Form.Control>
-          </Form.Group> */}
+          </Form.Group>
 
           <Form.Group className="mb-3">
             <Form.Label>Rating:</Form.Label>
             <Form.Control
               type="number"
-              placeholder="0"
               id="rating"
               value={game.rating}
               onChange={handleInput}
@@ -114,8 +118,8 @@ const EditGameForm = () => {
           </Link>
         </Form>
       </Container>
-        </div>
-    );
+    </div>
+  );
 };
 
 export default EditGameForm;
