@@ -46,7 +46,7 @@ const EditGameForm = () => {
 
   return (
     <div className="edit-form">
-      <h1>Edit Game</h1>
+      <h1>Edit Your Game</h1>
       <Container>
         <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-3">

@@ -4,11 +4,11 @@ import Navbar from "react-bootstrap/Navbar";
 
 const NavBar = () => {
   return (
-    <div className="NavBar freeze">
-      <Navbar className="color-nav" variant="light">
+    <div className="NavBar">
+      <Navbar className="nav" variant="light">
         <Container>
           <Navbar.Brand href="/">
-            <img src="https://cdn-icons-png.flaticon.com/512/5260/5260498.png" />
+            <img src="https://cdn-icons-png.flaticon.com/512/5260/5260498.png" alt="game-controller" />
             </Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="/games" className="nav-link">My Games</Nav.Link>

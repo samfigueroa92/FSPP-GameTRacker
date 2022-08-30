@@ -14,6 +14,7 @@ import Show from "./Pages/Show";
 import New from "./Pages/New";
 import Edit from "./Pages/Edit";
 import Error from "./Pages/Error";
+import Footer from './Pages/Footer';
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
           <Route path="/games/:id/edit" element={ <Edit /> } />
           <Route path="*" element={ <Error /> } />
         </Routes>
+        <Footer />
       </Router>
     </div>
   );

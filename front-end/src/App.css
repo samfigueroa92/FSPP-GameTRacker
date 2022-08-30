@@ -15,22 +15,22 @@ body{
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 1000px;
+  height: 800px;
+  font-family: 'Silkscreen', cursive;
 }
 
 /* NAVBAR */
 .NavBar img{
   width: 80px;
-  padding: 5px;
 }
 
-.color-nav{
+.nav{
   background-color:#E0BBE4;
   font-weight: bold;
+  padding: 2px;
 }
 
-.freeze{
-  background-color: #333;
+.NavBar{
   position: fixed;
   top: 0;
   width: 100%;
@@ -144,9 +144,6 @@ body{
 .edit{
   opacity: 80%;
   background-color: white;
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
   font-weight: bold;
   margin: 15% 200px;
 }
@@ -175,4 +172,63 @@ body{
   background-color: #E0BBE4;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+}
+
+/* ERROR */
+.error{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  margin: 100px 5px 20px;
+  opacity: 90%;
+}
+
+.error Button {
+  border: 1px solid white;
+  padding: 5px;
+  margin: 5px 240px 20px;
+  border-radius: 15px;
+  color: black;
+  box-shadow: 0 5px rgb(169, 169, 169);
+  background-color: #E0BBE4;
+  font-weight: bold;
+}
+
+.error Button:hover{
+  background-color: white;
+  color: black;
+}
+
+.error Button:active {
+  background-color: #E0BBE4;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.error h1{
+  text-align: center;
+}
+
+/* FOOTER */
+.footer{
+  padding: 5px;
+  background-color: #E0BBE4;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer img{
+  width: 30px;
+  margin: 5px;
+}
+
+.footer-text{
+  padding-top: 15px;
+  margin-right: 10px;
 }
