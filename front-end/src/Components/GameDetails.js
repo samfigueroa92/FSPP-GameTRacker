@@ -12,22 +12,19 @@ const GameDetails = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`${API}/games/${id}`)
-    .then((res) => setGame(res.data.payload))
-    .catch((err) => console.error(err));
+    axios
+      .get(`${API}/games/${id}`)
+      .then((res) => setGame(res.data.payload))
+      .catch((err) => console.error(err));
   }, [id]);
 
-  const deleteSong = () => {
+  const handleDelete = () => {
     axios
       .delete(`${API}/games/${id}`)
       .then(() => {
         navigate(`/games`);
       })
       .catch((err) => console.error(err));
-  };
-
-  const handleDelete = () => {
-    deleteSong();
   };
 
   return (
