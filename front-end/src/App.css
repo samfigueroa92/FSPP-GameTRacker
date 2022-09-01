@@ -70,6 +70,33 @@ body{
   margin: 15% 100px;
 }
 
+.games Button{
+  border: 1px solid white;
+  padding: 5px;
+  margin: 5px 5px 20px;
+  border-radius: 15px;
+  color: black;
+  box-shadow: 0 5px rgb(169, 169, 169);
+  background-color: #E0BBE4;
+  font-weight: bold;
+}
+
+.games Button:hover{
+  background-color: white;
+  color: black;
+}
+
+.games Button:active{
+  background-color: #E0BBE4;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.games Button:focus{
+  background-color: #E0BBE4;
+  color: black;
+}
+
 /* SHOW */
 .show{
   display: flex;
@@ -101,7 +128,6 @@ body{
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
-
 
 /* NEW */
 .new{

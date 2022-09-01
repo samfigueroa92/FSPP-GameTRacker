@@ -8,7 +8,7 @@ import Container from "react-bootstrap/Container";
 const API = process.env.REACT_APP_API_URL;
 
 const EditGameForm = () => {
-    const { id } = useParams();
+  const { id } = useParams();
   const navigate = useNavigate();
 
   const [game, setGame] = useState({
@@ -20,15 +20,17 @@ const EditGameForm = () => {
   });
 
   useEffect(() => {
-    axios.get(`${API}/games/${id}`)
-    .then(res => setGame(res.data.payload))
-    .catch(err => console.error(err))
+    axios
+      .get(`${API}/games/${id}`)
+      .then((res) => setGame(res.data.payload))
+      .catch((err) => console.error(err));
   }, [id]);
 
   const updateGame = (updatedGame, id) => {
-    axios.put(`${API}/games/${id}`, updatedGame)
-    .then(()=> navigate(`/games/${id}`))
-    .catch(err => console.error(err))
+    axios
+      .put(`${API}/games/${id}`, updatedGame)
+      .then(() => navigate(`/games/${id}`))
+      .catch((err) => console.error(err));
   };
 
   const handleInput = (e) => {
