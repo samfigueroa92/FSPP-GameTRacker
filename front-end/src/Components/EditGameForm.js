@@ -83,9 +83,10 @@ const EditGameForm = () => {
             >
               <option>--Select an option--</option>
               <option>In Progress</option>
-              <option>Playing</option>
+              <option>Currently Playing</option>
               <option>Completed</option>
               <option>Abandoned</option>
+              <option>Backlogged</option>
             </Form.Control>
           </Form.Group>
 

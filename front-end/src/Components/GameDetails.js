@@ -32,7 +32,7 @@ const GameDetails = () => {
       <Card style={{ width: "20rem" }}>
         <Card.Body>
           <Card.Title>
-            {game.is_favorite ? <span className="glow">⭐️</span> : null}
+            {game.is_favorite ? <img className="heart" src="https://bestanimations.com/media/hearts/1230084119pixel-heart-pink-animated-gif.gif" alt="heart-gif" />  : null}
             {game.name}
           </Card.Title>
           <Card.Text>

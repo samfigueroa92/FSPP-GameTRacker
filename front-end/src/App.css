@@ -79,6 +79,7 @@ body{
   box-shadow: 0 5px rgb(169, 169, 169);
   background-color: #E0BBE4;
   font-weight: bold;
+  font-size: x-small;
 }
 
 .games Button:hover{
@@ -95,6 +96,22 @@ body{
 .games Button:focus{
   background-color: #E0BBE4;
   color: black;
+}
+
+.heart{
+  width: 15px;
+  margin: 5px;
+}
+
+.stats{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stats div{
+  border: 1px solid black;
+  margin: 5px 25px;
 }
 
 /* SHOW */
