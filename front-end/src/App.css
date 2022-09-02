@@ -110,8 +110,11 @@ body{
 }
 
 .stats div{
-  border: 1px solid black;
-  margin: 5px 25px;
+  border: 2px dotted black;
+  margin: 25px 25px;
+  background-color: #E0BBE4;
+  font-weight: bold;
+  resize: none;
 }
 
 /* SHOW */
