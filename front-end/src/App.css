@@ -57,6 +57,28 @@ body{
   transform: translateY(4px);
 }
 
+.nav Button {
+  border: 1px solid white;
+  padding: 5px;
+  margin: 15px 5px 20px;
+  border-radius: 15px;
+  color: black;
+  box-shadow: 0 5px rgb(169, 169, 169);
+  background-color: #E0BBE4;
+  font-weight: bold;
+}
+
+.nav Button:hover{
+  background-color: white;
+  color: black;
+}
+
+.nav Button:active {
+  background-color: #E0BBE4;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
 /* INDEX */
 .games Table{
   background-color:white;
@@ -277,3 +299,21 @@ body{
   padding-top: 15px;
   margin-right: 10px;
 }
+
+/* LOGIN */
+.login{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin: 10% 200px;
+  text-align: center;
+}
+
+.google{
+  width: 100px;
+  margin-left: 110px;
+  padding: 10px;
+}
+
+
