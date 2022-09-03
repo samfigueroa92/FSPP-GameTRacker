@@ -1,5 +1,5 @@
 /* GENERAL */
-.App {
+.App{
   cursor: pointer;
 }
 
@@ -114,7 +114,6 @@ body{
   margin: 25px 25px;
   background-color: #E0BBE4;
   font-weight: bold;
-  resize: none;
 }
 
 /* SHOW */

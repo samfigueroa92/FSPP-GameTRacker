@@ -24,7 +24,7 @@ games.get("/", async (req, res) => {
     if (game) {
       res.json({payload: game, success: true});
     } else {
-      res.status(404).json({ error: "not found" });
+      res.status(404).json({ error: "Game not found." });
     };
   });
   
