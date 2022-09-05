@@ -29,18 +29,24 @@ const GameDetails = () => {
 
   return (
     <div className="game-details">
-      <Card style={{ width: "20rem" }}>
+      <Card className="card">
+      <Card.Img className="cover-photo" variant="top" src={game.image} />
         <Card.Body>
           <Card.Title>
             {game.is_favorite ? <img className="heart" src="https://bestanimations.com/media/hearts/1230084119pixel-heart-pink-animated-gif.gif" alt="heart-gif" />  : null}
             {game.name}
           </Card.Title>
           <Card.Text>
-            Console: {game.console}
+            {game.description}
             <br />
-            Progress: {game.progress}
             <br />
-            Rating: {game.rating}
+            <span>Console:</span> {game.console}
+            <br />
+            <br />
+            <span>Progress:</span>  {game.progress}
+            <br />
+            <br />
+            <span>Rating:</span>  {game.rating}
             <br />
           </Card.Text>
           <Link to={"/games"}>
