@@ -337,4 +337,10 @@ body{
   padding: 10px;
 }
 
+.login-card{
+  width: 20rem;
+  height: auto;
+  overflow: hidden;
+}
+
 

@@ -17,7 +17,7 @@ export const Login = () => {
 
   return (
     <div className="login">
-      <Card style={{ width: "20rem" }}>
+      <Card className="login-card">
       <Card.Img className="google" variant="top" src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png" />
         <Card.Body>
           <Card.Title>Log in with your Google account</Card.Title>
