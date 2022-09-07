@@ -11,6 +11,8 @@ const Game = ({ game }) => {
         return "⭐️ ⭐️ ⭐️ ⭐️";
       case 5:
         return "⭐️ ⭐️ ⭐️ ⭐️ ⭐️";
+      default:
+        return null;
     }
   };
 
@@ -18,7 +20,13 @@ const Game = ({ game }) => {
     <>
       <tr>
         <td>
-          {game.is_favorite ? <img className="heart" src="https://bestanimations.com/media/hearts/1230084119pixel-heart-pink-animated-gif.gif" alt="heart-gif" /> : null}
+          {game.is_favorite ? (
+            <img
+              className="heart"
+              src="https://bestanimations.com/media/hearts/1230084119pixel-heart-pink-animated-gif.gif"
+              alt="heart-gif"
+            />
+          ) : null}
           <a href={`/games/${game.id}`}>{game.name}</a>
         </td>
         <td>{game.console}</td>
