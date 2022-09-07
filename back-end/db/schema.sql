@@ -11,6 +11,5 @@ CREATE TABLE games (
     description TEXT,
     rating INTEGER,
     CHECK (rating >= 0 AND rating <= 5),
-    is_favorite BOOLEAN,
-    image TEXT
+    is_favorite BOOLEAN
 );
