@@ -343,6 +343,28 @@ body{
   overflow: hidden;
 }
 
+.login Button {
+  border: 1px solid white;
+  padding: 5px;
+  margin: 5px 5px 20px;
+  border-radius: 15px;
+  color: black;
+  box-shadow: 0 5px rgb(169, 169, 169);
+  background-color: #E0BBE4;
+  font-weight: bold;
+}
+
+.login Button:hover{
+  background-color: white;
+  color: black;
+}
+
+.login Button:active {
+  background-color: #E0BBE4;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
 /* HOME */
 .home-cards{
   display: flex;
@@ -352,7 +374,7 @@ body{
   background-color: white;
   border: 1px solid black;
   margin: 20px;
-  margin-top: 70px;
+  margin-top: 50px;
   padding: 5px;
   text-align: center;
   box-shadow: 5px 5px 15px rgb(0,0,0,0.9);
@@ -363,5 +385,37 @@ body{
 .float-card:hover{
   transform: scale(1.2);
   box-shadow: 5px 5px 15px rgb(0,0,0,0.6);
+}
 
+.home Button {
+  border: 1px solid white;
+  padding: 5px;
+  margin: 5px 5px 20px;
+  border-radius: 15px;
+  color: black;
+  box-shadow: 0 5px rgb(169, 169, 169);
+  background-color: #E0BBE4;
+  font-weight: bold;
+}
+
+.home Button:hover{
+  background-color: white;
+  color: black;
+}
+
+.home Button:active {
+  background-color: #E0BBE4;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.popup-header{
+  background-color: white;
+  border: 1px solid black;
+  margin: 20px;
+  padding: 5px;
+  text-align: center;
+  box-shadow: 5px 5px 15px rgb(0,0,0,0.9);
+  border-bottom-left-radius: 15px;
+  border-top-right-radius: 15px;
 }

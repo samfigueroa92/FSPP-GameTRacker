@@ -50,6 +50,7 @@ const Index = () => {
   return (
     <div className="index">
       <h1>My Collection</h1>
+      <h2>Total # of Games: {games.length}</h2>
       <section className="stats">
         <div>Games Completed: {completedStat}%</div>
         <div>Games Currently Playing: {playingStat}%</div>

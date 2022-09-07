@@ -3,6 +3,7 @@
 import { useContext } from "react";
 import { UserContext } from "../Providers/UserProvider";
 import { signOut } from "../Services/Firebase";
+import Button from "react-bootstrap/Button";
 
 const Home = () => {
   const user = useContext(UserContext);
@@ -24,10 +25,10 @@ const Home = () => {
     <div className="home">
       <h1>Welcome to GameTracker!</h1>
       {user ? (
-        <p>
-          Hello, {user.displayName}! You are now logged in! <br />{" "}
-          <button onClick={signOut}>Log Out</button>
-        </p>
+        <h3 className="popup-header">
+          Hello, {user.displayName}! <br /> You are now logged in! <br />
+          <Button onClick={signOut}>Log Out</Button>
+        </h3>
       ) : null}
       <div className="home-cards">
         <section className="float-card">
