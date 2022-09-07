@@ -8,6 +8,8 @@ export const UserProvider = (props) => {
 
     useEffect(()=>{
         auth.onAuthStateChanged((user) => {
+            console.log(user)
+
             if(user){
                 const { email, displayName, photoURL, uid } = user;
                 setUser({ email, displayName, photoURL, uid });
