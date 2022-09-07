@@ -45,8 +45,8 @@ const GameDetails = () => {
 
   return (
     <div className="game-details">
-      <Card className="card">
-      <Card.Img className="cover-photo" variant="top" src={game.image} />
+      <Card className="card" style={{ width: '18rem' }}>
+      {/* <Card.Img className="cover-photo" variant="top" src={game.image} /> */}
         <Card.Body>
           <Card.Title>
             {game.is_favorite ? <img className="heart" src="https://bestanimations.com/media/hearts/1230084119pixel-heart-pink-animated-gif.gif" alt="heart-gif" />  : null}

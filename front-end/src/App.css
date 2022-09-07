@@ -177,18 +177,18 @@ body{
   transform: translateY(4px);
 }
 
-.cover-photo{
+/* .cover-photo{
   width: 300px;
   margin: auto;
-}
+} */
 
-.card{
+/* .card{
   width: 70%;
   margin: auto;
   height: 700px;
   overflow-x: hidden;
   overflow-y: scroll;
-}
+} */
 
 .game-details span{
   font-weight: bold;
