@@ -87,6 +87,30 @@ const NewGameForm = () => {
             </Form.Control>
           </Form.Group>
 
+          {/* <Form.Group className="mb-3">
+            <Form.Label>Description:</Form.Label>
+            <Form.Control
+              id="description"
+              value={game.description}
+              type="text"
+              placeholder="..."
+              onChange={handleInput}
+              required
+            />
+          </Form.Group> */}
+
+          {/* <Form.Group className="mb-3">
+            <Form.Label>Image URL:</Form.Label>
+            <Form.Control
+              id="image"
+              value={game.image}
+              type="text"
+              placeholder="http://"
+              onChange={handleInput}
+              required
+            />
+          </Form.Group> */}
+
           <Form.Group className="mb-3">
             <Form.Label>Rating:</Form.Label>
             <Form.Control

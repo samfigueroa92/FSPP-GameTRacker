@@ -19,11 +19,11 @@ const getGame = async (id) => {
 };
 
 const createGame = async (game) => {
-  const { name, console, progress, description, image, rating, is_favorite } = game;
+  const { name, console, progress, rating, is_favorite } = game;
   try {
     const newGame = await db.one(
-      "INSERT INTO games (name, console, progress, description, image, rating, is_favorite) VALUES ($1, $2, $3, $4, $5, $5, $6, $7) RETURNING *",
-      [name, console, progress, description, image, rating, is_favorite]
+      "INSERT INTO games (name, console, progress, rating, is_favorite) VALUES ($1, $2, $3, $4, $5) RETURNING *",
+      [name, console, progress, rating, is_favorite]
     );
     return newGame;
   } catch (error) {
@@ -41,10 +41,10 @@ const deleteGame = async (id) => {
 };
 
 const updateGame = async (game, id) => {
-  const { name, console, progress, description, image, rating, is_favorite } = game;
+  const { name, console, progress, rating, is_favorite } = game;
   try { 
-    const updatedGame = await db.one("UPDATE games SET name=$1, console=$2, progress=$3, description=$4, image=$5, rating=$6, is_favorite=$7 WHERE id=$8 RETURNING *",
-    [name, console, progress, description, image, rating, is_favorite, id]);
+    const updatedGame = await db.one("UPDATE games SET name=$1, console=$2, progress=$3, rating=$4, is_favorite=$5 WHERE id=$6 RETURNING *",
+    [name, console, progress, rating, is_favorite, id]);
     return updatedGame;
   } catch (err) {
     return err;
