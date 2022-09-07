@@ -14,11 +14,11 @@ const NewGameForm = () => {
     progress: "",
     rating: "",
     is_favorite: false,
+    image: "",
   });
 
   const navigate = useNavigate();
 
-  //ERROR SUBMITTING NEW GAME, CANNOT POST ???
 
   const addNewGame = (newGame) => {
     axios
@@ -99,7 +99,7 @@ const NewGameForm = () => {
             />
           </Form.Group> */}
 
-          {/* <Form.Group className="mb-3">
+          <Form.Group className="mb-3">
             <Form.Label>Image URL:</Form.Label>
             <Form.Control
               id="image"
@@ -109,7 +109,7 @@ const NewGameForm = () => {
               onChange={handleInput}
               required
             />
-          </Form.Group> */}
+          </Form.Group>
 
           <Form.Group className="mb-3">
             <Form.Label>Rating:</Form.Label>

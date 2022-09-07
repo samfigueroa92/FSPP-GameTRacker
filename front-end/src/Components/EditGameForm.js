@@ -17,6 +17,7 @@ const EditGameForm = () => {
     progress: "",
     rating: "",
     is_favorite: false,
+    image: "",
   });
 
   useEffect(() => {
@@ -88,6 +89,17 @@ const EditGameForm = () => {
               <option>Abandoned</option>
               <option>Backlogged</option>
             </Form.Control>
+          </Form.Group>
+
+          <Form.Group className="mb-3">
+            <Form.Label>Image URL:</Form.Label>
+            <Form.Control
+              id="image"
+              value={game.image}
+              type="text"
+              onChange={handleInput}
+              required
+            />
           </Form.Group>
 
           <Form.Group className="mb-3">
