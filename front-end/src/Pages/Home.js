@@ -1,11 +1,11 @@
 // import { useState } from "react";
 // import axios from "axios";
-import {useContext} from "react";
+import { useContext } from "react";
 import { UserContext } from "../Providers/UserProvider";
 import { signOut } from "../Services/Firebase";
 
 const Home = () => {
-  const user = useContext(UserContext)
+  const user = useContext(UserContext);
   // const [request, setRequest] = useState("");
   // const [response, setResponse] = useState([]);
 
@@ -23,12 +23,33 @@ const Home = () => {
   return (
     <div className="home">
       <h1>Welcome to GameTracker!</h1>
-      {user ? <p>Hello, {user.displayName}! You are now logged in! <br/> <button onClick={signOut}>Log Out</button></p> : null}
-      {/* <form onSubmit={handleSubmit}>
+      {user ? (
+        <p>
+          Hello, {user.displayName}! You are now logged in! <br />{" "}
+          <button onClick={signOut}>Log Out</button>
+        </p>
+      ) : null}
+      <div className="home-cards">
+        <section className="float-card">
+          <h1>Game Collection</h1>
+          <p>Add games you want to play and keep track of your progress!</p>
+        </section>
+        <section className="float-card">
+          <h1>Completionist</h1>
+          <p>Check your stats and see how you rank as a Completionist!</p>
+        </section>
+        <section className="float-card">
+          <h1>Rate Your Favorites</h1>
+          <p>
+            Keep track of your favorite games and give them an honest rating!
+          </p>
+        </section>
+      </div>
+        {/* <form onSubmit={handleSubmit}>
                 <input type="text" placeholder="Search" id="search-bar" name="search" value={request} onChange={(e) => setRequest(e.target.value)}/>
                 <input type="submit" value="Get Games" />
-            </form>
-            {response.map(game => game.name)} */}
+                </form>
+              {response.map(game => game.name)} */}
     </div>
   );
 };

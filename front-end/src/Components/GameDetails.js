@@ -10,6 +10,22 @@ const GameDetails = () => {
   const [game, setGame] = useState({});
   const { id } = useParams();
   const navigate = useNavigate();
+  const starRating = (num) => {
+    switch (num) {
+      case 1:
+        return "⭐️";
+      case 2:
+        return "⭐️ ⭐️";
+      case 3:
+        return "⭐️ ⭐️ ⭐️";
+      case 4:
+        return "⭐️ ⭐️ ⭐️ ⭐️";
+      case 5:
+        return "⭐️ ⭐️ ⭐️ ⭐️ ⭐️";
+      default:
+        return null;
+    }
+  };
 
   useEffect(() => {
     axios
@@ -46,7 +62,7 @@ const GameDetails = () => {
             <span>Progress:</span>  {game.progress}
             <br />
             <br />
-            <span>Rating:</span>  {game.rating}
+            <span>Rating:</span>  {starRating(game.rating)}
             <br />
           </Card.Text>
           <Link to={"/games"}>

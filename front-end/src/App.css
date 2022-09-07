@@ -343,4 +343,25 @@ body{
   overflow: hidden;
 }
 
+/* HOME */
+.home-cards{
+  display: flex;
+}
 
+.float-card{
+  background-color: white;
+  border: 1px solid black;
+  margin: 20px;
+  margin-top: 70px;
+  padding: 5px;
+  text-align: center;
+  box-shadow: 5px 5px 15px rgb(0,0,0,0.9);
+  border-bottom-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.float-card:hover{
+  transform: scale(1.2);
+  box-shadow: 5px 5px 15px rgb(0,0,0,0.6);
+
+}
