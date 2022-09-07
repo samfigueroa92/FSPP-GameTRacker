@@ -6,8 +6,8 @@ CREATE TABLE games (
     console TEXT,
     progress TEXT,
     description TEXT,
-    image TEXT,
     rating INTEGER,
     CHECK (rating >= 0 AND rating <= 5),
-    is_favorite BOOLEAN
+    is_favorite BOOLEAN,
+    image TEXT
 );
