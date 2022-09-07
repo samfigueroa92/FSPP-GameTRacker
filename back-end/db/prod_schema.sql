@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS games_dev;
+DROP TABLE IF EXISTS games;
 
 CREATE TABLE games (
     id SERIAL PRIMARY KEY,
