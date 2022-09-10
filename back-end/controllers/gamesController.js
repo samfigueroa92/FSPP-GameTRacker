@@ -21,7 +21,7 @@ games.get("/", async (req, res) => {
   games.get("/:id", async (req, res) => {
     const { id } = req.params;
     const game = await getGame(id);
-    if (game) {
+    if (game.id) {
       res.json({payload: game, success: true});
     } else {
       res.status(404).json({ error: "Game not found." });
@@ -31,7 +31,11 @@ games.get("/", async (req, res) => {
   games.post("/", async (req, res) => {
     try {
       const game = await createGame(req.body);
-      res.json(game);
+      if(game.id){
+        res.status(200).json({success: true, payload: game})
+      }else{
+        res.status(422).json({success: false, payload: "Couldn't create game"})
+      }
     } catch (error) {
       return error;
     };
@@ -53,7 +57,7 @@ games.get("/", async (req, res) => {
     if (updatedGame.id) {
       res.status(200).json({payload: updatedGame, success: true});
     } else {
-      res.status(404).json({error: "Game not updated."});
+      res.status(404).json({success: false, payload: "Game not updated."});
     }
   })
   
